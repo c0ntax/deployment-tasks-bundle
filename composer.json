@@ -2,7 +2,7 @@
     "name": "c0ntax/deployment-tasks-bundle",
     "type": "symfony-bundle",
     "description": "A symfony wrapper around c0ntax/deployment-tasks",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "license": "Apache-2.0",
     "authors": [
         {
