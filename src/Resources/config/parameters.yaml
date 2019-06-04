@@ -1,2 +1,2 @@
 parameters:
-    c0ntax_deployment_tasks.directory.tasks: '%kernel.project_dir%/src/DeploymentTasks%'
+    c0ntax_deployment_tasks.directory.tasks: '%kernel.project_dir%/src/DeploymentTasks'
