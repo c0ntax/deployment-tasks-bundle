@@ -55,7 +55,7 @@ By default, the place that is used to store the tasks is located in `%kernel.pro
 
 ```yaml
 parameters:
-    c0ntax_deployment_tasks.directory.tasks: '%kernel.project_dir/src/DeploymentTasks%'
+    c0ntax_deployment_tasks.directory.tasks: '%kernel.project_dir%/src/DeploymentTasks%'
 ```
 
 ## Usage
