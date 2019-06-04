@@ -30,6 +30,7 @@ class C0ntaxDeploymentTasksExtension extends Extension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yaml');
         $loader->load('parameters.yaml');
-        $loader->load('config.yaml');
+        // Loading this config does not work currently. TODO FIX!
+//        $loader->load('config.yaml');
     }
 }

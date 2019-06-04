@@ -25,15 +25,27 @@ In `knp_gaufrette.yaml`
 ```yaml
 knp_gaufrette:
     adapters:
+        tasks_local:
+            service:
+                id: c0ntax_deployment_tasks.gaufrette.adapter.local
+
         memory_local:
             local:
                 directory: '%kernel.project_dir%/var/memory'
                 
     filesystems:
+        tasks:
+            adapter: tasks_local
+            alias: tasks_filesystem
+
         memory:
             adapter: memory_local
             alias: memory_filesystem
 ```
+
+_NOTE:_ Currently (until I can figure out how to get a symfony bundle to configure another symfony bundle) there is a bit of
+boilerplate that needs to be in the configuration. Just make sure that the `adapters.tasks_local` and `filesystems.tasks` is
+copied in as-is from above.
 
 This will set up a local disk memory store within the project. Obviously you can configure it anywhere. With Gaufrette, you can configure it
 to [live almost anywhere](https://github.com/KnpLabs/KnpGaufretteBundle#configuring-the-adapters). So, you might want to store it in a database or and S3 bucket
