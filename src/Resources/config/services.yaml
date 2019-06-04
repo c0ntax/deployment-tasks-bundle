@@ -1,0 +1,18 @@
+services:
+    c0ntax_deployment_tasks.command.deployment_tasks_run:
+        class: C0ntax\DeploymentTasksBundle\Command\DeploymentTasksRunCommand
+        arguments:
+            - '@c0ntax_deployment_tasks.service.runner'
+        tags:
+            - { name: console.command }
+
+    c0ntax_deployment_tasks.service.runner:
+        class: C0ntax\DeploymentTasks\Service\RunnerService
+        arguments:
+            - '@c0ntax_deployment_tasks.service.task'
+
+    c0ntax_deployment_tasks.gaufrette.adapter.local:
+        class: C0ntax\DeploymentTasks\Gaufrette\Adapter\Local
+        arguments:
+            - '%c0ntax_deployment_tasks.directory.tasks%'
+            - true

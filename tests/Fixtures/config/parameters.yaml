@@ -1,0 +1,4 @@
+parameters:
+    secret: ThisIsVerySecret!
+
+    c0ntax_deployment_tasks.directory.tasks: "%kernel.root_dir%/DeploymentTasks"
