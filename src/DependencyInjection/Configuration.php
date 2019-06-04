@@ -33,6 +33,7 @@ class Configuration implements ConfigurationInterface
             ->addDefaultsIfNotSet()
             ->children()
                 ->arrayNode('filesystems')
+                    ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('tasks')->isRequired()->defaultValue('tasks_filesystem')->info('A Gaufrette service id for the location of all the tasks to run')->end()
                         ->scalarNode('memory')->isRequired()->defaultValue('memory_filesystem')->info('A Gaufrette service id for the location of all the tasks that have been run')->end()

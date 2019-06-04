@@ -23,7 +23,7 @@ knp_gaufrette:
             adapter: memory_local
             alias: memory_filesystem
 
-c0ntax_deployment_tasks:
-    filesystems:
-        tasks: tasks_filesystem
-        memory: memory_filesystem
+#c0ntax_deployment_tasks:
+#    filesystems:
+#        tasks: tasks_filesystem
+#        memory: memory_filesystem
